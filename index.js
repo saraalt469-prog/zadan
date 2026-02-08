@@ -139,3 +139,51 @@ function stepen() {
   }
   console.log("сумма: " + s);
 }
+
+function ontwo() {
+  let array = [1, 2, 3, 4, 5];
+  console.log(
+    array.map((el) => {
+      return el + 2;
+    }),
+  );
+}
+
+function fruits() {
+  let array = ["яблоко", "банан", "киви", "ананас"];
+
+  let a = array.filter((array) => array.length > 5);
+  console.log(a);
+}
+
+function arifm() {
+  let n = [10, 20, 30, 40];
+  let s = n.reduce((a, c) => a + c, 0);
+  console.log(s / n.length);
+}
+
+function peoples() {
+  let mas = [
+    { name: "Анна", age: 22 },
+    { name: "Иван", age: 17 },
+    { name: "Олег", age: 30 },
+  ];
+  mas.filter((x) => x.age > 18).forEach((x) => console.log(x.name));
+}
+
+function table() {
+  let a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  a.forEach((element) => {
+    console.log(element.join(" "));
+  });
+}
+
+function unik() {
+  let f = (a) => {
+    return a.filter((x, i) => a.indexOf(x) === i);
+  };
+}
