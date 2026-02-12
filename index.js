@@ -1,3 +1,5 @@
+"use strict";
+
 function one() {
   const random = Math.floor(Math.random() * 10);
 
@@ -186,4 +188,81 @@ function unik() {
   let f = (a) => {
     return a.filter((x, i) => a.indexOf(x) === i);
   };
+}
+
+// --------------------------------------------------------------
+
+function zadOne() {
+  let user = {
+    name: "Vasia",
+    age: "42",
+    email: "vasiatru@gmail.com",
+    city: "Podzemelie",
+  };
+  user.isAdmin = true;
+  delete user.age;
+  console.log(user);
+}
+
+function zadTwo() {
+  let car = {
+    brand: "toyota",
+    model: "Camry",
+    engine: {
+      power: 150,
+      type: "benzin",
+    },
+  };
+  console.log("мощность двигателя: ", car.engine.power);
+}
+
+function calcul() {
+  let calculator = {
+    add: function (a, b) {
+      return a + b;
+    },
+    sub: function (a, b) {
+      return a - b;
+    },
+    mul: function (a, b) {
+      return a * b;
+    },
+    div: function (a, b) {
+      if (b !== 0) {
+        return a / b;
+      } else {
+        return "error";
+      }
+    },
+  };
+  let a = +prompt("введите число а");
+  let b = +prompt("введите число b");
+  console.log("сложение: ", calculator.add(a, b));
+  console.log("вычитание: ", calculator.sub(a, b));
+  console.log("Умножение: ", calculator.mul(a, b));
+  console.log("Деление: ", calculator.div(a, b));
+}
+
+function priceProducts() {
+  let products = [
+    { name: "Молоко", price: 60 },
+    { name: "Хлеб", price: 40 },
+    { name: "Сыр", price: 200 },
+  ];
+  products.forEach((prod) => {
+    if (prod.price > 50) {
+      console.log(prod.name);
+    }
+  });
+
+  let sum = 0;
+  products.forEach((product) => {
+    sum += product.price;
+  });
+
+  let srPrice = sum / products.length;
+  console.log("средняя цена:" + srPrice);
+
+  products.push({ name: "масло", price: 120 });
+  console.log(products);
 }
