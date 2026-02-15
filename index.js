@@ -266,3 +266,123 @@ function priceProducts() {
   products.push({ name: "масло", price: 120 });
   console.log(products);
 }
+
+// ------------------------------------------------------------
+
+function date() {
+  let d = new Date();
+  let a = console.log(
+    "сегодня " +
+      d.getDate() +
+      " " +
+      d.getMonth() +
+      1 +
+      " " +
+      d.getFullYear() +
+      " года",
+  );
+}
+
+function nedel() {
+  let day = new Date();
+  let w = [
+    "воскресенье",
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота",
+  ];
+  let weekday = w[day.getDay()];
+  console.log(`сегодня ${weekday}`);
+}
+
+function newyear() {
+  let day = new Date();
+}
+
+//---------------------------------------------------------------------------
+
+function stroka() {
+  let a = prompt("введите строку");
+  console.log(`длина строки: ${a.length}`);
+}
+
+function firstB() {
+  let b = prompt("введите имя");
+  console.log(b[0].toUpperCase() + b.slice(1));
+}
+
+function isFalindrome() {
+  let str = prompt();
+  console.log(str === str.split("").reverse().join(""));
+}
+
+function vremia() {
+  let day = new Date();
+  console.log(
+    ` год: ${day.getFullYear()} месяц: ${day.getMonth() + 1} день: ${day.getDate()}`,
+  );
+}
+
+function chas() {
+  let time = new Date();
+  let hours = time.getHours;
+
+  if (hours >= 0 && hours < 6) {
+    console.log("ночь");
+  } else if (hours >= 6 && hours < 12) {
+    console.log("утро");
+  } else if (hours >= 12 && hours <= 18) {
+    console.log("день");
+  } else {
+    console.log("вечер");
+  }
+}
+
+function dantext() {
+  let text = " JavaScript — это круто! ";
+  console.log(text.trim().toUpperCase());
+}
+
+function dataR() {
+  let date = prompt("введите дату рождения ГГГГ-ММ-ДД ");
+  let now = new Date();
+  let b = new Date(date);
+  let m = now.getFullYear() - b.getFullYear();
+  if (
+    now.getMonth() - b.getMonth() < 0 ||
+    (now.getMonth() - b.getMonth() === 0 && now.getDate() - b.getDate() < 0)
+  ) {
+    m--;
+  }
+  alert(`Вам ${m} лет`);
+}
+function shotName(fullName) {
+  let p = fullName.split(" ");
+
+  //['Иванов'
+  // 'Иван'
+  // 'Иванович']
+
+  return `${p[0]} ${p[1][0]}. ${p[2][0]}.`;
+}
+function SN() {
+  console.log(shotName("Иванов Иван Иванович"));
+}
+
+function countWords(str) {
+  if (typeof str !== "string") return 0;
+
+  str = str.trim();
+  if (str === "") return 0;
+
+  return [...str].reduce((count, char, i, arr) => {
+    return char === " " && arr[i + 1] !== " " ? count + 1 : count;
+  }, 1);
+}
+function wordsK() {
+  let str = prompt("введите строку");
+  console.log(countWords(str));
+}

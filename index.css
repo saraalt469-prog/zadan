@@ -4,6 +4,8 @@
   gap: 15px;
   height: max-content;
   max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
 }
 .buttuon-wr button {
   background-color: pink;
@@ -13,6 +15,9 @@
 
 body {
   background-color: rgb(251, 218, 224);
+  background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL3JtNjA2ZGVzaWduLXJlbWl4LWJnLTEzLWIuanBn.jpg?odnHeight=117&odnWidth=117&odnBg=FFFFFF);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button-Wrapper {
